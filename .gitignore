@@ -2,3 +2,7 @@
 *.class
 
 \.project
+
+\.classpath
+
+bin/
