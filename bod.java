@@ -6,12 +6,19 @@ public class bod {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-
+    AddonBlass a1 = new AddonBlass();
 
 	}
 
 }
 
-class shitFace {
+class ShitFace {
+
+  ShitFace() {
+
+  }
+
+
+
 
 }
