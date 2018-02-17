@@ -14,7 +14,7 @@ public class Book {
         this.id = id;
         this.stockAmount = stockAmount;
         this.totalAmount = totalAmount;
-        
+
         if (stockAmount >= 1) {
             inStock = true;
         } else {
