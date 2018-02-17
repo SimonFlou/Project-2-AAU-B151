@@ -40,5 +40,39 @@ public class Book {
         System.out.println(this.name + " has its total amount set to " + this.totalAmount);
         }
     }
+
+    public int getTotalAmount() {
+        return totalAmount;
+    }
+
+    public int getStockAmount() {
+        return stockAmount;
+    }
+
+    public void borrowBook() {
+        stockAmount--;
+        System.out.println("You have now borrowed the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        checkStock();
+    }
+
+    public returnBook() {
+        stockAmount++;
+        System.out.println("You have now returned the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        checkStock();
+    }
+
+    private checkStock() {
+        if (this.stockAmount <= 0) {
+            inStock = false;
+        } else if (this.stockAmount >= 1) {
+            inStock = true;
+        }
+    }
+
+    Book b1 = new Book("Alice in Wonderland", 6969, 12, 16);
+    
+    b1.borrowBook();
+    b1.returnBook();
+    System.out.println(getStockAmount);
     
 }
