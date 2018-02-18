@@ -12,6 +12,5 @@ public class MainSystem {
     System.out.println(b1.getStockAmount());
 
 	}
-
-
+	
 }

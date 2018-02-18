@@ -10,10 +10,10 @@ public class Book {
     private int totalAmount;
 
     Book(String _name, int _id, int _stockAmount, int _totalAmount) {
-        _name = name;
-        _id = id;
-        _stockAmount = stockAmount;
-        _totalAmount = totalAmount;
+        name = _name;
+        id = _id;
+        stockAmount = _stockAmount;
+        totalAmount = _totalAmount;
 
         if (stockAmount >= 1) {
             inStock = true;
