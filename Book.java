@@ -6,12 +6,12 @@ public class Book {
     private boolean inStock;
     private int totalAmount;
 
-    Book(String name, int id, int stockAmount, int totalAmount) {
-        this.name = name;
-        this.id = id;
-        this.stockAmount = stockAmount;
-        this.totalAmount = totalAmount;
-        
+    Book(String _name, int _id, int _stockAmount, int _totalAmount) {
+        name = _name;
+        id = _id;
+        stockAmount = _stockAmount;
+        totalAmount = _totalAmount;
+
         if (stockAmount >= 1) {
             inStock = true;
         } else {
@@ -26,7 +26,7 @@ public class Book {
     public void setTotalAmount(int num) {
         if(num >= 1) {
         this.totalAmount = num;
-        System.out.println(this.name + " has its total amount set to " + this.totalAmount);
+        System.out.println(name + " has its total amount set to " + totalAmount);
         }
     }
 
@@ -40,13 +40,13 @@ public class Book {
 
     public void borrowBook() {
         stockAmount--;
-        System.out.println("You have now borrowed the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now borrowed the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
     public void returnBook() {
         stockAmount++;
-        System.out.println("You have now returned the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now returned the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
