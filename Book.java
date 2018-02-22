@@ -1,6 +1,8 @@
 /**
  * Book
  */
+import java.lang.System;
+
 public class Book {
 
     private String name;
@@ -22,16 +24,8 @@ public class Book {
         }
     }
 
-    public static boolean bookInStock(String name) {
-        return inStock;
-    }
-
-    public static boolean bookInStock(int id) {
-        return inStock;
-    }
-
     public boolean bookInStock() {
-        return = bookInStock(this.name);
+        return inStock;
     }
 
     public void setTotalAmount(int num) {
@@ -55,13 +49,13 @@ public class Book {
         checkStock();
     }
 
-    public returnBook() {
+    public void returnBook() {
         stockAmount++;
         System.out.println("You have now returned the book: " + this.name + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
-    private checkStock() {
+    private void checkStock() {
         if (this.stockAmount <= 0) {
             inStock = false;
         } else if (this.stockAmount >= 1) {
@@ -70,9 +64,4 @@ public class Book {
     }
 
     Book b1 = new Book("Alice in Wonderland", 6969, 12, 16);
-    
-    b1.borrowBook();
-    b1.returnBook();
-    System.out.println(getStockAmount);
-    
 }
