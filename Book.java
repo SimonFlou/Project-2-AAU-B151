@@ -62,6 +62,4 @@ public class Book {
             inStock = true;
         }
     }
-
-    Book b1 = new Book("Alice in Wonderland", 6969, 12, 16);
 }
