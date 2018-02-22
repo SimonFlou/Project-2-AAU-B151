@@ -51,13 +51,13 @@ public class Book {
 
     public void borrowBook() {
         stockAmount--;
-        System.out.println("You have now borrowed the book: " + name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now borrowed the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
     public void returnBook() {
         stockAmount++;
-        System.out.println("You have now returned the book: " + name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now returned the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
