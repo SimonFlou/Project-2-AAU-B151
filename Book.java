@@ -1,6 +1,3 @@
-/**
- * Book
- */
 public class Book {
 
     private String name;
@@ -9,12 +6,12 @@ public class Book {
     private boolean inStock;
     private int totalAmount;
 
-    Book(String name, int id, int stockAmount, int totalAmount) {
-        this.name = name;
-        this.id = id;
-        this.stockAmount = stockAmount;
-        this.totalAmount = totalAmount;
-        
+    Book(String _name, int _id, int _stockAmount, int _totalAmount) {
+        name = _name;
+        id = _id;
+        stockAmount = _stockAmount;
+        totalAmount = _totalAmount;
+
         if (stockAmount >= 1) {
             inStock = true;
         } else {
@@ -22,22 +19,14 @@ public class Book {
         }
     }
 
-    public static boolean bookInStock(String name) {
-        return inStock;
-    }
-
-    public static boolean bookInStock(int id) {
-        return inStock;
-    }
-
     public boolean bookInStock() {
-        return = bookInStock(this.name);
+        return inStock;
     }
 
     public void setTotalAmount(int num) {
         if(num >= 1) {
         this.totalAmount = num;
-        System.out.println(this.name + " has its total amount set to " + this.totalAmount);
+        System.out.println(name + " has its total amount set to " + totalAmount);
         }
     }
 
@@ -51,28 +40,21 @@ public class Book {
 
     public void borrowBook() {
         stockAmount--;
-        System.out.println("You have now borrowed the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now borrowed the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
-    public returnBook() {
+    public void returnBook() {
         stockAmount++;
-        System.out.println("You have now returned the book: " + this.name + ".\nThe stock is now: " + stockAmount);
+        System.out.println("You have now returned the book: " + name + " id: " + id + ".\nThe stock is now: " + stockAmount);
         checkStock();
     }
 
-    private checkStock() {
+    private void checkStock() {
         if (this.stockAmount <= 0) {
             inStock = false;
         } else if (this.stockAmount >= 1) {
             inStock = true;
         }
     }
-
-    Book b1 = new Book("Alice in Wonderland", 6969, 12, 16);
-    
-    b1.borrowBook();
-    b1.returnBook();
-    System.out.println(getStockAmount);
-    
 }
