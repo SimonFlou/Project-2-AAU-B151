@@ -1,8 +1,3 @@
-/**
- * Book
- */
-import java.lang.System;
-
 public class Book {
 
     private String name;
