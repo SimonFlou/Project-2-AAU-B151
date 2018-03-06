@@ -7,6 +7,7 @@ public class User {
 	private String userMail;
 	private String userPassword;
 	private ArrayList<Book> borrowBooks = new ArrayList<Book>();
+	private boolean online = false;
 	
 	User(String userName, String userMail, String userPassword) {
 		this.userName = userName;
@@ -24,4 +25,8 @@ public class User {
 		
 	}
 
+	public void borrowBook(Book bookID) {
+		borrowBooks.add(bookID);
+		
+	}
 }
