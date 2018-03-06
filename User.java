@@ -18,14 +18,18 @@ public class User {
 	}
 	
 	public void login(String userName, String userPassword) {
-		
+		this.online = true;
 	}
 	
 	public void logout() {
-		
+		this.online = false;
 	}
 
 	public void borrowBook(Book bookID) {
+		
+	}
+	
+	public void returnBook(int listIndex) {
 		
 	}
 }
