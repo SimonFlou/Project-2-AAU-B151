@@ -16,14 +16,25 @@ public class BookModel {
 		
 		if(stockAmount > 0) {
 			inStock = true;
-		} else {
 			inStock = false;
 		}
-		
-//		for (idCounter = 1; idCounter < totalAmount+1; idCounter++) {
-//				books.add(idCounter, new Book(bookName, idCounter, modelId));
-//			}
 		}
+	
+	public void addBook(String bookName, int modelId) {
+		int size = books.size();
+		System.out.println("Current size of Arraylist: " + size);
+		if (size < totalAmount) {
+			books.add(new Book(this.bookName, this.modelId));
+			Book bookIndex = books.get(books.size()-1);
+			System.out.println("Book " + bookIndex.getName() + " has been added at index " + (books.size()-1));
+		} else {
+			totalAmount++;
+			stockAmount++;
+			books.add(new Book(this.bookName, this.modelId));
+			System.out.println("New books has been added \nNew total is: " + totalAmount);
+//			System.out.println("You have to increase the total amount of this book to add more.\nThe current total is: " + totalAmount);
+		}
+	}
 	
     public boolean bookInStock() {
         return inStock;
@@ -36,8 +47,12 @@ public class BookModel {
         }
     }
     
-    public int getModelID() {
+    public int getModelId() {
     	return modelId;
+    }
+    
+    public String getBookName() {
+    	return bookName;
     }
 
     public int getTotalAmount() {

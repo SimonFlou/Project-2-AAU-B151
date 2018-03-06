@@ -2,15 +2,16 @@ public class MainSystem {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
-    Book b1 = new Book("Alice in Wonderland", 6969, 12, 16);
-
-    b1.borrowBook();
-
-    b1.returnBook();
-
-    System.out.println(b1.getStockAmount());
-
+		BookModel bm1 = new BookModel("Alice in Wonderland", 4, 4, 123);
+		bm1.addBook(bm1.getBookName(), bm1.getModelId());
+		bm1.addBook(bm1.getBookName(), bm1.getModelId());
+		bm1.addBook(bm1.getBookName(), bm1.getModelId());
+		bm1.addBook(bm1.getBookName(), bm1.getModelId());
+		bm1.addBook(bm1.getBookName(), bm1.getModelId());
+		
+		BookModel bm2 = new BookModel("Peter Plys", 2, 0, 456);
+		Book b3 = bm1.books.get(3);
+		System.out.println(b3.getIDString());
 	}
 	
 }
