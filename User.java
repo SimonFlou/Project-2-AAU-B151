@@ -26,7 +26,7 @@ public class User {
 	}
 
 	public void borrowBook(Book bookID) {
-		
+		borrowBooks.add(bookID);
 	}
 	
 	public void returnBook(int listIndex) {
